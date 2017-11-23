@@ -1,0 +1,35 @@
+
+mvn -Pnexus dependency:resolve
+mvn dependency:resolve-plugins 
+解决依赖关系，根据POM文件，下载或者更新该项目所依赖的库文件。
+
+mvn -Pnexus dependency:sources
+为maven依赖包添加源码
+
+
+思考：
+什么是用@bean，什么时候用@Component?
+@Component被用在要被自动扫描和装配的类上。
+@Bean主要被用在方法上，来显式声明要用生成的类。
+
+DI（xml）：
+
+1.set  根据类型自动匹配，与名称无关
+2.构造方法  根据类型进行装配，但是必须存在相应的构造器。
+3.工厂 BeanFactory
+4.注解 Annotation
+
+
+DI(JavaConfig/Annotation)
+a.@Configuration
+b.@Bean
+c.@Autowired
+D.混合使用（Annotation/xml/config）
+
+
+@Configuration可理解为用spring的时候xml里面的<beans>标签
+@Bean可理解为用spring的时候xml里面的<bean>标签
+@Autowired提供自动装配的注解，默认使用byType进行装配。
+
+
+@ImportResource

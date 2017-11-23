@@ -1,0 +1,32 @@
+Stream :
+创建方式：
+1.
+	Stream stream = Stream.of("aa","ff","vv");
+2.list
+	List<String> list = new ArrayList();
+	Stream stream = list.stream();
+3.Array
+	String[] strArr = {"www","wdw","ww"}
+	Stream stream = Stream.of(strArr);
+	
+	
+filter:过滤
+skip(n):剔除前n个
+forEach：循环遍历
+findFirst：返回值类型Optional
+findAny()
+limit(n):截取前n个
+map();
+sorted():排序
+distinct：去重
+
+Stream.iterate(1,n->2): 1,3,5,7,.....
+
+必须使用limit进行截取 
+ collect
+ 
+ 
+ 特点：
+	1.不修改，不存储数据
+	2.充分的和lambda结合使用
+	3.不能按照索引查找数据
